@@ -1,0 +1,14 @@
+program WRONG_ARRAY;
+
+#- Arrays can't be polymorphic [[int | 5], [bool | 2]] -#
+[ [int | 5] | 2] long := [ [1,2,3,4,5], [true, true] ];
+
+#- Initialization array is too long -#
+[ [int | 5] | 2] long := [ [1,2,3,4,5,6], [1,2,3] ];
+
+#- Initialized array is too long -#
+[ [int | 5] | 2] long := [[1,2,3], [], [4,5,6]];
+
+begin
+
+end

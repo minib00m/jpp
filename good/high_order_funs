@@ -1,0 +1,34 @@
+program HIGH_ORDER_FUNS;
+(int) -> int x := function(int x) -> int; begin return x; end;
+int y := -100;
+function plus1(int x) -> int;
+begin
+	return x+1;
+end;
+
+
+function power2(int x) -> int;
+begin
+ return x**2;
+end;
+
+
+function comp((int) -> int f, g) -> (int) -> int;
+begin
+	return function zlozenie(int x) -> int;
+		begin
+			return f(g(x)) + y;
+		end;
+end;
+
+
+function app((int) -> int f; int x) -> int;
+begin
+  return f(x) + y;
+end;
+
+
+begin
+#- OBLICZANIE ((10 + 1)^2 - 100) - 100 -#
+print(app(comp(power2, plus1), 10));
+end

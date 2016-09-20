@@ -1,0 +1,23 @@
+program FUN_ARR;
+int i;
+[(int) -> int | 10] arr;
+
+function makeFun(int i) -> (int) -> int;
+begin
+  return function(int x) -> int;
+    begin
+      return x + i;
+    end;
+end;
+
+function call((int) -> int f; int x) -> int;
+begin
+  return f(x);
+end;
+
+begin
+  for(i := 0; i < 10; i++) do begin
+    arr[i] := makeFun(i);
+    print(call(arr[i], i**2));
+  end;
+end

@@ -1,0 +1,21 @@
+program COMPARE_FUNS;
+int x := 5;
+function a() -> int;
+begin
+	return 5;
+end;
+
+function b() -> int;
+begin
+	return 4;
+end;
+
+begin
+  if(a == b) then begin
+    x++;
+  	print(x);
+  end else
+  begin
+    print(x);
+  end;
+end

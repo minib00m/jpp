@@ -1,0 +1,23 @@
+program MANIPULATE_ARRAY;
+[int | 5] arr;
+
+function head([int | 5] arr) -> int;
+begin
+	return arr[0];
+end;
+
+function tail([int | 5] arr) -> [int | 4];
+[int | 4] help;
+int i;
+begin
+	for(i := 0; i < 4; i++) do begin
+		help[i] := arr[i];
+	end;
+	return help;
+end;
+
+begin
+  arr := [3,3,3,3,3];
+  print(head(arr));
+  print(tail(arr));
+end
